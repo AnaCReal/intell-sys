@@ -3,7 +3,7 @@ import numpy as np
 grid_size = 6
 sensors_range = [3,2,2,1]
 initial = [(0,0), (0,4), (3,4), (4,2)] # Dónde empiezan nuestros 4 sensores
-grid = [['-','-','#','#','-','#'], ['-','#','-','#','#','#'], ['#','#','-','-','-','-'], ['-','-','-','-','-','-'], 
+grid = [['-','-','#','#','-','#'], ['-','#','#','-','-','-'], ['#','#','-','-','-','-'], ['-','-','-','-','-','-'], 
         ['#','#','#','-','-','-'], ['-','-','-','-','#','#']] #definido en el ejercicio
 defined_actions = {'E': (1, 0), 'N': (0, 1), 'S': (0, -1), 'W': (-1, 0)}
 sensors = []
@@ -25,3 +25,9 @@ for i in range(0, len(sensors_range)):
                         if grid [j][k+n] == '-':
                             grid [j][k+n] = i+1
 print (grid)
+X=0
+for j in range (0, len(grid)):
+        for k in range (0, len(grid[j])):
+            if grid [j][k] == '-':
+               X=X+1
+print (X)
