@@ -36,8 +36,11 @@ print(X)
 New_state = []
 for i in range (0, 4):
     R=[]
+    for i in range(0, len(sensors_range)):
+        sensor_size = sensors_range[i]
+        s=6-sensor_size
     for j in range (0,2):
-        rand = r.randint(0,5)
+        rand = r.randint(0,s)
         R.append (rand)
     New_state.append(R)
 print (R)
