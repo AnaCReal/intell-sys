@@ -30,4 +30,5 @@ for j in range (0, len(grid)):
         for k in range (0, len(grid[j])):
             if grid [j][k] == '-':
                X=X+1
-print (X)
+X = 24-X
+print(X)
