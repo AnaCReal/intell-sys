@@ -17,7 +17,11 @@ for i in range(0, len(sensors_range)):
             if np.all(np.asarray(initial[i]) == np.asarray(g)):
                 rng = sensors_range [i] 
                 for n in range (0, rng):
-                    grid [j+n][k] = i+1
-                    grid [j+n][k+n] = i+1
-                    grid [j][k+n] = i+1
+                    for m in range (0, rng):
+                        if grid [j+m][k] == '-':
+                            grid [j+m][k] = i+1
+                        if grid [j+m][k+n] == '-':
+                            grid [j+m][k+n] = i+1
+                        if grid [j][k+n] == '-':
+                            grid [j][k+n] = i+1
 print (grid)
